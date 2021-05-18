@@ -1,5 +1,6 @@
 import socket
 import struct
+import matplotlib.pyplot as plt
 
 UDP_IP = "0.0.0.0" # PC IP
 UDP_PORT = 30072 # Spectrum data port
@@ -23,5 +24,9 @@ while c == True:
     print("Max channel:", header[10])
 
     data = struct.unpack('>' + 'H'*400, raw_data[36:836])
-    print("Data:", data)
+    print("Data:", list(data))
+
+    plt.plot(list(data))
+    plt.show()
+
     c = False
