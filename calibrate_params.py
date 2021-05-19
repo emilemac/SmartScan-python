@@ -71,7 +71,6 @@ def main():
 
     #cosine = fit_cosine(strains_750[:,grating,:])
 
-
     # Print highest and lowest strain values
     print("Ch 1 g " + str(grating) + " min:", np.min(smoothed[:,0]), " max:", np.max(smoothed[:,0]))
     #print("Ch 1 g " + str(grating) + " min:", np.min(strains_750[:, grating, 0]), " max:", np.max(strains_750[:, grating, 0]))
